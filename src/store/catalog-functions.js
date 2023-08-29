@@ -24,10 +24,11 @@ export const fetchCatalog = (userId, userToken) => {
 
     try {
       const catalogData = await fetchData();
+      
 
       dispatch(
         catalogActions.replaceCatalog({
-          products: [...catalogData] || [],
+          products: [...catalogData.products] || [],
         })
       );
       dispatch(catalogActions.setCatalogStorage());
