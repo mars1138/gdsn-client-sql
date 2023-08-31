@@ -33,6 +33,9 @@
 .productCards a:hover div {
   background: var(--secondary-light);
 }
+.productCards a:hover span {
+  color: var(--green-1-light);
+}
 
 .productCards a:hover h3 {
   color: var(--white-3);

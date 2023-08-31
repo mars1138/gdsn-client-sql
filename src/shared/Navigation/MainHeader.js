@@ -13,7 +13,7 @@ const MainHeader = (props) => {
           <Logo />
         </div>
         <h1 className={classes['header-title']}>
-          <Link to="/">GDSN-Plus</Link>
+          <Link to="/">GDSN-Plus SQL</Link>
         </h1>
         <nav className={classes['header-nav']}>
           <NavLinks />

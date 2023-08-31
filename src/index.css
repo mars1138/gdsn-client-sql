@@ -8,12 +8,12 @@
   --bp-small: 37.5em; /* 715px */
   --bp-smallest: 31.25em; /* 600px */
   
-  --primary: rgb(41, 141, 235);
-  --primary-light: rgb(37,157,242);
-  --secondary: rgb(93,180,242);	
-  --secondary-light: rgb(154,208,245);
-  --secondary-light-tr: rgba(154, 209, 245, 0.904);
-  --secondary-light-2: rgb(182, 222, 248);
+  --primary: rgb(71, 16, 84);
+  --primary-light: #622870;
+  --secondary: #7f488c;	
+  --secondary-light: rgb(159, 114, 168);
+  --secondary-light-tr: rgba(159, 114, 168, 0.904);
+  --secondary-light-2: #b68abe;
 
   --white-1: rgb(250, 250, 250);
   --white-2: rgb(247, 247, 247);
@@ -29,7 +29,8 @@
   --gray-4:  rgba(207, 207, 207, 0.534);
   --gray-5:  rgb(170, 170, 170);
 
-  --green-1: rgb(72, 180, 78);
+  --green-1: rgb(59, 148, 64);
+  --green-1-light: rgb(131, 209, 135);
 
   --red-1: #b84a39;
   --red-2: #fff4f5;

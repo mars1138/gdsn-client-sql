@@ -562,9 +562,11 @@ const ProductsTable = (props) => {
                             </div>
                           )}
                           {cell.column.Header === 'GTIN' && (
-                            <Link to={`/products/${cell.value}`}>
-                              {cell.value}
-                            </Link>
+                            <span className={classes['item-link']}>
+                              <Link to={`/products/${cell.value}`}>
+                                {cell.value}
+                              </Link>
+                            </span>
                           )}
                           {cell.column.Header === 'Type' && type.name}
                           {cell.column.Header === 'Category' && category.name}
