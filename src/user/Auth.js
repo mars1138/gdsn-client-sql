@@ -144,7 +144,7 @@ const Auth = () => {
               isLoginMode ? 'Error during login' : 'Error during signup'
             }
             onClear={clearError}
-          >
+            >
             {error}
           </Modal>
           <h3>{isLoginMode ? 'Please Login' : 'Create an Account'}</h3>
