@@ -59,7 +59,7 @@ const ContactForm = (props) => {
 
     try {
       const responseData = await sendRequest(
-        `${process.env.REACT_APP_BACKEND_URL}/api/contact`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/contacts`,
         'POST',
         JSON.stringify({
           name: formState.inputs.name.value,
