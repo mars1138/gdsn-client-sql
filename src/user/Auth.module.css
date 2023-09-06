@@ -27,4 +27,5 @@
 .mode:hover {
   cursor: pointer;
   color: var(--secondary-light);
+  text-decoration: underline;
 }
