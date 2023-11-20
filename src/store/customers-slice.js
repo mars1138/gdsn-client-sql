@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { customers as customerList } from '../assets/data/customersData';
 
+// state for customers
 const customersSlice = createSlice({
   name: 'customers',
   initialState: {

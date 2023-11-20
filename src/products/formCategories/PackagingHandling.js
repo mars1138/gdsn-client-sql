@@ -8,6 +8,11 @@ import classes from './Categories.module.css';
 const PackagingHandling = (props) => {
   const { product, inputHandler } = props;
 
+  // console.log(product?.packagingType);
+  // console.log(props.packageOptions);
+  // console.log(product?.tempUnits);
+  // console.log(props.tempOptions);
+
   return (
     <div className={classes.category}>
       <h3>PackagingHandling</h3>
@@ -24,7 +29,7 @@ const PackagingHandling = (props) => {
             selectOptions={props.packageOptions}
             label="Packaging Type"
             validators={[VALIDATOR_REQUIRE()]}
-            errorText={product ? product.packagingType : ''}
+            errorText="Please select a packaging type"
             selected={product ? product.packagingType : ''}
             onInput={inputHandler}
             setSelectOptions={props.setSelectOption}

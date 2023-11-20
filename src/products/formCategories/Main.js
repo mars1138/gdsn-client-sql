@@ -13,6 +13,9 @@ import classes from './Categories.module.css';
 const Main = (props) => {
   const { product, inputHandler } = props;
 
+  // console.log(product?.category);
+  // console.log(props.categoryOptions);
+
   return (
     <div className={classes.category}>
       <h3>Main</h3>
@@ -67,7 +70,7 @@ const Main = (props) => {
             selected={product ? product.category : ''}
             initialValid={props.edit}
             onInput={inputHandler}
-            setSelectOption={props.setSelectOption}
+            // setSelectOption={props.setSelectOption}
           />
           <FormInput
             key={product ? `${product.type}2` : 'type'}
@@ -81,7 +84,7 @@ const Main = (props) => {
             initialValid={props.edit}
             onInput={inputHandler}
             edit={props.edit}
-            setSelectOption={props.setSelectOption}
+            // setSelectOption={props.setSelectOption}
           />
         </div>
         <div className={classes['block-50']}>

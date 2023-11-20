@@ -34,7 +34,7 @@ const UpdateProduct = () => {
   const [didSubmit, setDidSubmit] = useState(false);
 
   const [subscriberUpdate, setSubscriberUpdate] = useState([]);
-  const [selectOptionsValues, setSelectOptionsValues] = useState();
+  // const [selectOptionsValues, setSelectOptionsValues] = useState();
 
   const [formState, inputHandler, setFormData] = useForm(
     {
@@ -74,23 +74,21 @@ const UpdateProduct = () => {
 
   useEffect(() => {
     let product;
-    console.log(params.pid);
     const fetchProduct = () => {
       product = catalog.filter((item) => item.gtin === +params.pid)[0];
     };
 
     fetchProduct();
-    console.log('product to update: ', product);
     if (product.subscribers && product.subscribers.length > 0)
       setSubscriberUpdate([...product.subscribers]);
 
-    setSelectOptionsValues({
-      category: product.category,
-      type: product.type,
-      packagingType: product.packagingType,
-      tempUnits: product.tempUnits,
-      image: product.image,
-    });
+    // setSelectOptionsValues({
+    //   category: product.category,
+    //   type: product.type,
+    //   packagingType: product.packagingType,
+    //   tempUnits: product.tempUnits,
+    //   image: product.image,
+    // });
 
     setFormData(
       {
@@ -135,11 +133,11 @@ const UpdateProduct = () => {
           isValid: true,
         },
         packagingType: {
-          value: product.packagingType || '',
+          value: product.packagingType,
           isValid: true,
         },
         tempUnits: {
-          value: product.tempUnits || '',
+          value: product.tempUnits,
           isValid: true,
         },
         minTemp: {
@@ -161,20 +159,17 @@ const UpdateProduct = () => {
     setLoadedProduct(product);
   }, [params.pid, catalog, setFormData]);
 
-  const selectOptionsHandler = (value) => {
-    const newVal = value;
+  // const selectOptionsHandler = (value) => {
+  //   const newVal = value;
 
-    setSelectOptionsValues((prev) => {
-      return { ...prev, ...newVal };
-    });
-  };
+  //   setSelectOptionsValues((prev) => {
+  //     return { ...prev, ...newVal };
+  //   });
+  // };
 
   const updateSubmitHandler = (event) => {
     event.preventDefault();
     setShowConfirmation(false);
-
-    console.log('formState: ', formState);
-    console.log('updateSubmit subscriberUpdate: ', subscriberUpdate);
 
     let url;
 
@@ -233,13 +228,12 @@ const UpdateProduct = () => {
     'Cancel'
   );
 
+  // console.log(selectOptionsValues);
+
   const resetSubmitHandler = () => {
     setDidSubmit(false);
     history.push('/products');
   };
-
-  console.log(selectOptionsValues);
-  console.log('loadedProduct: ', loadedProduct);
 
   const errorModal = (
     <Modal
@@ -280,7 +274,7 @@ const UpdateProduct = () => {
             {isSubmitting && <LoadingSpinner />}
             <Main
               inputHandler={inputHandler}
-              setSelectOption={selectOptionsHandler}
+              // setSelectOption={selectOptionsHandler}
               product={loadedProduct}
               categoryOptions={categoryOptions}
               typeOptions={typeOptions}
@@ -293,7 +287,7 @@ const UpdateProduct = () => {
             />
             <PackagingHandling
               inputHandler={inputHandler}
-              setSelectOption={selectOptionsHandler}
+              // setSelectOption={selectOptionsHandler}
               onSubmit={updateSubmitHandler}
               product={loadedProduct}
               packageOptions={packageOptions}

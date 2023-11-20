@@ -43,6 +43,7 @@ const Auth = () => {
     history.push('/auth');
   }
 
+  // changes mode between login and signup
   const modeHandler = () => {
     if (!isLoginMode) {
       setFormData(
@@ -91,8 +92,6 @@ const Auth = () => {
           }
         );
 
-        console.log('loginResponse: ', res);
-
         dispatch(
           authActions.login({
             user: res.userData.userId,
@@ -119,8 +118,6 @@ const Auth = () => {
           }
         );
 
-        console.log('SignupResponse: ', res);
-
         dispatch(
           authActions.login({
             user: res.userData.userId,
@@ -144,7 +141,7 @@ const Auth = () => {
               isLoginMode ? 'Error during login' : 'Error during signup'
             }
             onClear={clearError}
-            >
+          >
             {error}
           </Modal>
           <h3>{isLoginMode ? 'Please Login' : 'Create an Account'}</h3>

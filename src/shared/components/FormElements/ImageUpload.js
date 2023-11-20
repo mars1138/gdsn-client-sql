@@ -14,15 +14,6 @@ const ImageUpload = (props) => {
   const filePickerRef = useRef();
 
   useEffect(() => {
-    console.log('props.initialValue: ', props.initialValue);
-    console.log('file: ', file);
-
-    // if (file === '') {
-    //   setPreviewUrl('');
-    //   setIsValid(false);
-    //   return;
-    // }
-
     if (!file) return;
 
     const fileReader = new FileReader();

@@ -17,8 +17,9 @@
 .form-control input,
 .form-control textarea {
   width: 100%;
+  font: inherit;
   font-size: 1.25rem;
-  color: var(--secondary);
+  /* color: var(--secondary); */
   border: 1px solid var(--gray-3);
   border-radius: var(--borderRadius-input);
   background: var(--white-2);
@@ -35,7 +36,7 @@
 .form-control select {
   font: inherit;
   font-size: 1.2rem;
-  color: var(--secondary);
+  /* color: var(--secondary); */
   border: 1px solid var(--gray-3);
   border-radius: var(--borderRadius-input);
   background: var(--white-2);

@@ -7,12 +7,13 @@ const initialAuth = {
   expireDate: null,
 };
 
+// this slice handles user login state
+// token will be included in post/update requests to server for authentication
 const authSlice = createSlice({
   name: 'authentication',
   initialState: initialAuth,
   reducers: {
     login(state, action) {
-      console.log('action.payload: ', action.payload);
       const { user, token, expireDate } = action.payload;
 
       const tokenExpire =
@@ -33,7 +34,6 @@ const authSlice = createSlice({
       );
     },
     logout(state) {
-      console.log('logging out...');
       state.isAuthenticated = false;
       state.userId = null;
       state.token = null;

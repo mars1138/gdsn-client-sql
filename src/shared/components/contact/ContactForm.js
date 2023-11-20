@@ -71,8 +71,6 @@ const ContactForm = (props) => {
         { 'Content-Type': 'application/json' }
       );
 
-      console.log(responseData);
-
       if (!responseData) {
         props.toggleSubmitting();
         clearError();
