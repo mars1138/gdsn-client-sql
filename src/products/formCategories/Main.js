@@ -37,7 +37,7 @@ const Main = (props) => {
             id="description"
             element="textarea"
             label="Product Description"
-            validators={[VALIDATOR_MINLENGTH(5)]}
+            validators={[VALIDATOR_MINLENGTH(10)]}
             errorText="Please enter a description (min 10 characters)"
             initialValue={product ? product.description : ''}
             initialValid={props.edit}
